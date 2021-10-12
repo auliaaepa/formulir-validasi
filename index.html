@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Validasi</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/script/department.js"></script>
+    <script src="assets/script/validation.js"></script>
+    <script src="assets/script/focus.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="assets/image/Logo-ITS.png">
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="wrapper">
+            <div class="title">
+                <div class="button">
+                    <a href="https://my.its.ac.id/sso/dashboard">
+                        <button class="back small" type="button"><i class="fa fa-arrow-left"></i></button>
+                    </a>
+                </div>
+                <div class="text">
+                    <h2>Pendaftaran Kuliah Tatap Muka</h2>
+                </div>
+                <div class="button">
+                    <a href="https://my.its.ac.id/sso/dashboard">
+                        <button class="back big" type="button"><i class="fa fa-arrow-left"></i>Kembali</button>
+                    </a>
+                </div>
+            </div>
+            <form name="formPendaftaran" novalidate action="success.html" method="post" onsubmit="return validateForm();">
+                <div class="container">
+                    <div class="form-group">
+                        <label>FAKULTAS</label>
+                        <select id="fakultas" name="fakultas" class="form-control" required>
+                            <option value="">Pilih Fakultas</option>
+                            <option value="scientics">Fakultas Sains dan Analika Data - SCIENTICS</option>
+                            <option value="indsys">Fakultas Teknologi Industri dan Rekayasa Sistem - INDSYS</option>
+                            <option value="civplan">Fakultas Teknik Sipil, Perencanaan, dan Kebumian - CIVPLAN</option>
+                            <option value="vocations">Fakultas Vokasi - VOCATIONS</option>
+                            <option value="martech">Fakultas Teknologi Kelautan - MARTECH</option>
+                            <option value="electics">Fakultas Teknologi Elektro dan Informatika Cerdas - ELECTICS</option>
+                            <option value="creabiz">Fakultas Desain Kreatif dan Bisnis Digital - CREABIZ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>DEPARTEMEN</label>
+                        <select id="departemen" name="departemen" class="form-control" required>
+                            <option value="">Pilih Departemen</option>
+                        </select>
+                    </div>
+
+                    <div class="subtitle">
+                        <div class="line">
+                            <hr>
+                        </div>
+                        <div class="text">
+                            Identitas Diri
+                        </div>
+                        <div class="line">
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>NAMA</label>
+                        <input type="text" name="nama" placeholder="Nama Lengkap" class="form-control" required maxlength="80" minlength="3">
+                    </div>
+                    <div class="form-group">
+                        <label>NRP</label>
+                        <input type="text" name="nrp" placeholder="NRP Lengkap" class="form-control" required maxlength="14" minlength="10">
+                    </div>                    
+                    <div class="form-group">
+                        <label>EMAIL</label>
+                        <input type="email" name="email" placeholder="Email Aktif" class="form-control" required>
+                        <small id="emailHelp" class="form-text text-muted">Email akan digunakan untuk mengirimkan notifikasi</small>
+                    </div>
+                    
+                    <div class="subtitle">
+                        <div class="line">
+                            <hr>
+                        </div>
+                        <div class="text">
+                            Status Covid-19
+                        </div>
+                        <div class="line">
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>KOTA</label>
+                        <input type="text" name="kota" placeholder="Kota Asal" class="form-control" required maxlength="50" minlength="3">
+                    </div>
+                    <div class="form-group">
+                        <label>PENYINTAS</label>
+                        <select name="penyintas" class="form-control" required>
+                            <option value="">Pilih Status Penyintas</option>
+                            <option value="ya">Ya</option>
+                            <option value="tidak">Tidak</option>
+                        </select>
+                    </div>   
+                    <div class="form-group">
+                        <label>DOSIS VAKSIN</label>
+                        <select name="dosis" class="form-control" required>
+                            <option value="">Pilih Dosis Vaksinasi</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value=">2">>2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>JENIS VAKSIN</label>
+                        <select name="jenis" class="form-control" required>
+                            <option value="">Pilih Jenis Vaksin Terakhir</option>
+                            <option value="tidak">Tidak menerima</option>
+                            <option value="sinovac">Sinovac</option>
+                            <option value="bio farma">Bio Farma</option>
+                            <option value="astrazaneca">AstraZeneca</option>
+                            <option value="sinopharm">Sinopharm</option>
+                            <option value="moderna">Moderna</option>
+                            <option value="pfizer">Pfizer</option>
+                            <option value="sputnik v">Sputnik V</option>
+                            <option value="jansen">Janssen</option>
+                            <option value="convidecia">Convidecia</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>KETERSEDIAAN</label>
+                        <select name="sedia" class="form-control" required>
+                            <option value="">Pilih Ketersediaan Kuliah</option>
+                            <option value="true">Bersedia Tatap Muka</option>
+                            <option value="false">Tidak Bersedia Tatap Muka</option>
+                        </select>
+                    </div>
+
+                    <button class="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

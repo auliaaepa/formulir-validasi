@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: #f5f6fa; 
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0px auto;
+}
+
+header {
+    background-color: #ffffff;
+    position: fixed; 
+    top: 0px;  
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e4f0;
+}
+
+header .logo {
+    display: inline-block;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+.main {
+    padding-top: 80px;
+}
+
+.main .title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px 20px 0px;
+}
+
+.title .text {
+    flex-basis: 68%;
+}
+
+.text h2 {
+    text-align: center;
+    font-weight: 500;
+}
+
+.title .button {
+    flex-basis: 15%;
+}
+
+.button button.small {
+    display: none;
+}
+
+@media screen and (max-width: 880px) {
+    .button button.big {
+        display: none;
+    }
+
+    .button button.small {
+        display: initial;
+    }
+}
+
+.button button.back {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #c0ccda;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button button.back:hover {
+    background-color: #f5f6fa;
+    border: 1px solid #94a2af;
+}
+
+.button button.back:active {
+    transform: scale(0.9);
+    transition: 20ms;
+}
+
+.title .text + .button {
+    text-align: right;
+}
+
+.title .text + .button button.back i {
+    margin-right: 5px;
+}
+
+.main form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2e4f0;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+form .container {
+    padding: 20px;
+    overflow: hidden;
+}
+
+form .form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 500;
+    font-size: small;
+}
+
+.form-group .form-control {
+    width: 100%;
+    padding: 10px;
+    color: #757575;
+    border-radius: 5px;
+    border: 1px solid #cfd4da;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.form-group .form-control:focus {
+    border-color:#80bdff;
+    outline:0;
+    box-shadow:0 0 0 .2rem rgba(0, 123, 255,.25);
+}
+
+.form-group small {
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+form .subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.subtitle .line {
+    flex-basis: 38%;
+}
+
+.subtitle .line hr {
+    border: 1px solid #ffffff;
+    border-top: 1px solid #757575;
+}
+
+.subtitle .text {
+    flex-basis: 20%;
+    text-align: center;    
+    font-weight: 400;
+}
+
+form button.submit {
+    float: right;
+    background-color: #023980;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+form button.submit:hover {
+    background-color: #012962;
+    cursor: pointer;
+    transition: 5ms;
+}
+
+form button.submit:active {
+    transform: scale(0.9);
+    transition: 20ms;
+}
