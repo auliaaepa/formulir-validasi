@@ -52,8 +52,8 @@ function validateForm() {
     
     if (!confirm("Apakah Anda yakin ingin mengirimkan formulir ini?\nData yang sudah terkirim tidak dapat diubah")){
         return false;
+    } else {
+        alert("Data berhasil disimpan");
     }
-
-    alert("Data berhasil disimpan");
     
 }
